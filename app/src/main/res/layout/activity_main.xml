@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MapActivity">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </org.osmdroid.views.MapView>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center"
+        android:checkedButton="@id/radio_floor1"
+        android:orientation="vertical">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_floor1"
+            android:text="@string/_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@drawable/radio_flat_text_selector"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_floor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@drawable/radio_flat_text_selector"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_floor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_primary"
+            android:text="@string/_3"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@drawable/radio_flat_text_selector"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_floor4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_primary"
+            android:text="@string/_4"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@drawable/radio_flat_text_selector"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_floor5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_primary"
+            android:minHeight="48dp"
+            android:text="@string/_5"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@drawable/radio_flat_text_selector"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/shape"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_remove_24"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center|top"
+            android:contentDescription="@string/todo" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/floor"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center|top"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/campus"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_gravity="start|top"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_gravity="end|top"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:dividerColor="@color/black"
+            android:layout_gravity="top"
+            android:layout_marginTop="70dp"/>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="2dp"
+            android:layout_height="110dp"
+            android:layout_gravity="start|top"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="130dp"
+            app:dividerColor="@color/black"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="2dp"
+            android:layout_height="110dp"
+            android:layout_gravity="start|top"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="270dp"
+            app:dividerColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/start_campus_sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="75dp"
+            android:contentDescription="@string/campus"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            tools:ignore="RtlHardcoded" />
+
+        <Spinner
+            android:id="@+id/start_floor_sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="75dp"
+            android:contentDescription="@string/floor"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/start_number_sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/number"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            tools:ignore="RtlHardcoded" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:dividerColor="@color/black"
+            android:layout_gravity="top"
+            android:layout_marginTop="125dp"/>
+
+
+        <Spinner
+            android:id="@+id/end_campus_sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="130dp"
+            android:contentDescription="@string/campus"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            tools:ignore="RtlHardcoded" />
+
+        <Spinner
+            android:id="@+id/end_floor_sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="130dp"
+            android:contentDescription="@string/floor"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/end_number_sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="130dp"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/number"
+            android:dropDownWidth="wrap_content"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            tools:ignore="RtlHardcoded" />
+        <CheckBox
+            android:id="@+id/toilet_cb"
+            android:gravity="center|start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textColor="@color/black"
+            android:text="@string/toilet"
+            android:layout_marginTop="190dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/build"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp" />
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

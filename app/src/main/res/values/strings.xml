@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Навигатор УГАТУ</string>
+    <string name="text_label_1">Карта</string>
+    <string name="text_label_2">Информация</string>
+    <string name="text_label_3">О нас</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="build">Построить</string>
+    <string name="floor">Этаж</string>
+    <string name="campus">Корпус</string>
+    <string name="number">Номер</string>
+    <string name="todo">Поднять страницу</string>
+    <string name="toilet">Построить маршрут к ближайшему туалету</string>
+    <string name="title">Выбор</string>
+
+    <string-array name="campuses">
+        <item>1</item>
+        <item>2</item>
+        <item>6</item>
+    </string-array>
+</resources>
